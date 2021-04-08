@@ -64,8 +64,8 @@ You can find them inside `api/users/model.js`. All of these functions return Pro
 <!-- - `find` Resolves to the list of users (or empty array). -->
 <!-- - `findById` Takes an `id` and resolves to the user with that id (or null if the id does not exist). -->
 <!-- - `insert` Takes a new user `{ name, bio }` and resolves to the the newly created user `{ id, name, bio }`. -->
-- `update` Takes an `id` and an existing user `{ name, bio }` and resolves the updated user `{ id, name, bio}` (or null if the id does not exist).
-- `remove` Takes an `id`  and resolves to the deleted user `{ id, name, bio }`.
+<!-- - `update` Takes an `id` and an existing user `{ name, bio }` and resolves the updated user `{ id, name, bio}` (or null if the id does not exist). -->
+<!-- - `remove` Takes an `id`  and resolves to the deleted user `{ id, name, bio }`. -->
 
 #### Endpoint Specifications
 
@@ -103,18 +103,18 @@ You can find them inside `api/users/model.js`. All of these functions return Pro
   - respond with HTTP status code `500`.
   - return the following JSON object: `{ message: "The user information could not be retrieved" }`. -->
 
-When the client makes a `DELETE` request to `/api/users/:id`:
+<!-- When the client makes a `DELETE` request to `/api/users/:id`:
 
 - If the _user_ with the specified `id` is not found:
 
   - respond with HTTP status code `404` (Not Found).
-  - return the following JSON object: `{ message: "The user with the specified ID does not exist" }`.
+  - return the following JSON object: `{ message: "The user with the specified ID does not exist" }`. -->
 
-- If there's an error in removing the _user_ from the database:
+<!-- - If there's an error in removing the _user_ from the database:
   - respond with HTTP status code `500`.
-  - return the following JSON object: `{ message: "The user could not be removed" }`.
+  - return the following JSON object: `{ message: "The user could not be removed" }`. -->
 
-When the client makes a `PUT` request to `/api/users/:id`:
+<!-- When the client makes a `PUT` request to `/api/users/:id`:
 
 - If the _user_ with the specified `id` is not found:
 
@@ -124,12 +124,12 @@ When the client makes a `PUT` request to `/api/users/:id`:
 - If the request body is missing the `name` or `bio` property:
 
   - respond with HTTP status code `400` (Bad Request).
-  - return the following JSON response: `{ message: "Please provide name and bio for the user" }`.
+  - return the following JSON response: `{ message: "Please provide name and bio for the user" }`. -->
 
-- If there's an error when updating the _user_:
+<!-- - If there's an error when updating the _user_:
 
   - respond with HTTP status code `500`.
-  - return the following JSON object: `{ message: "The user information could not be modified" }`.
+  - return the following JSON object: `{ message: "The user information could not be modified" }`. -->
 
 - If the user is found and the new information is valid:
 
